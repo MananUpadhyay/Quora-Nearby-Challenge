@@ -14,9 +14,14 @@ public class Solution {
     public static void main(String[] args) throws Exception {
    
         Quora q = new Quora();
-        q.readUserInput();
-        // q.readInputFile(inputFile);
+        // q.readUserInput();
+        
+        // get the file passed in as an argument... 
+        String inputFile = args[0];
+        q.readInputFile(inputFile);
+        
         System.out.println("Output: ");
+        
         for (int i = 0; i < q.QUERY_COUNT; i++) {
             q.solveQuery(Quora.mQuery[i]);
         }
